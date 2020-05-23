@@ -20,8 +20,7 @@ const Validate = () => {
 
 		let field = inputFields[i];
 		let message = $(`#${field.id}-message`);
-		// let fieldType = field.attr("type");
-		
+
 		switch (i) {
 			case 0:
 			case 1:
