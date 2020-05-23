@@ -118,7 +118,6 @@ small > a:hover {
     text-decoration: none;
 }
 
-
 /************************************ EVENT-BASED APPLICATIONS *********************************/
 /* PRESS ANIMTION */
 @keyframes press {
@@ -127,10 +126,6 @@ small > a:hover {
 }
 .animate {
     animation: press 0.3s -0.02s ease-in-out;
-}
-/*LINK HOVER ANIMATION*/
-@keyframes underline {
-    100% { text-decoration: underline; }
 }
 
 
