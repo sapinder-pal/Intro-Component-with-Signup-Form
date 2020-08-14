@@ -20,17 +20,27 @@ body {
 
 
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 90px;
     padding-left: 11%; padding-right: 8%;
 }
 
 /******************** COLUMN-1 **************************/
 .column-1 {
-    flex-basis: 50%;
-    align-self: auto;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
     text-align: left;
     padding-right: 15px;
 }
@@ -49,7 +59,8 @@ body {
 
 /***************************** COLUMN-2 ************************/
 .column-2 {
-    flex-basis: 45%;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
     text-align: center;
 }
 
@@ -57,7 +68,8 @@ body {
     padding: 40px 40px 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 8px var(--shadow);
+    -webkit-box-shadow: 0 8px var(--shadow);
+            box-shadow: 0 8px var(--shadow);
 }
 
 p.card {  /* Purchase Plan Background */
@@ -66,7 +78,8 @@ p.card {  /* Purchase Plan Background */
     font-size: 0.9em;
     font-weight: 600;
     background: var(--blue);
-    box-shadow: 0 8px var(--shadow);
+    -webkit-box-shadow: 0 8px var(--shadow);
+            box-shadow: 0 8px var(--shadow);
     color: white;
 }
 p > span { font-weight: 400; color: var(--dull-white);}
@@ -80,7 +93,8 @@ div.card { /* Form Background */
     border-radius: 5px;
 }
 .form-control:focus {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 input { 
@@ -96,7 +110,8 @@ input:focus {
     padding: 15px 10px 10px;
     background: var(--green);
     color: white;
-    box-shadow: 0 3px 2px var(--btn-shadow);
+    -webkit-box-shadow: 0 3px 2px var(--btn-shadow);
+            box-shadow: 0 3px 2px var(--btn-shadow);
     border: none;
 }
 #submit-btn:hover {
@@ -120,12 +135,29 @@ small > a:hover {
 
 /************************************ EVENT-BASED APPLICATIONS *********************************/
 /* PRESS ANIMTION */
+@-webkit-keyframes press {
+    50% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px); opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px); opacity: 1\
+    }
+}
 @keyframes press {
-    50% {  transform: translateY(2px); opacity: 0 }
-    100% {    transform: translateY(2px); opacity: 1 }
+    50% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px); opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px); opacity: 1
+    }
 }
 .animate {
-    animation: press 0.3s -0.02s ease-in-out;
+    -webkit-animation: press 0.3s -0.02s ease-in-out;
+            animation: press 0.3s -0.02s ease-in-out;
 }
 
 
@@ -154,16 +186,26 @@ input + small {
         background: url("images/bg-intro-desktop.png"), var(--red);
     }
     .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding-top: 90px;
         padding-left: 8%; padding-right: 8%;
     }
     /******************** COLUMN-1 **************************/
     .column-1 {
-        flex-basis: 50%;
-        align-self: auto;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        -ms-flex-item-align: auto;
+            -ms-grid-row-align: auto;
+            align-self: auto;
         text-align: center;
         padding-right: 15px;
     }
